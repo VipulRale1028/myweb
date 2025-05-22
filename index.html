@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="icon" href="man-icon.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .hero-animation {
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white font-sans">
+  <div class="h-20"></div>
+
+  <!-- Navigation -->
+  <nav class="mx-4 sm:mx-6 mb-10 backdrop-blur-md bg-gray-900/70 shadow-xl py-4 px-6 flex flex-col items-center rounded-xl border border-gray-700">
+    <div class="flex flex-wrap justify-center gap-8 text-lg font-semibold text-gray-300">
+      <a href="#about" class="group relative flex items-center gap-2 cursor-pointer transition duration-300">
+        <i data-lucide="user" class="w-5 h-5 text-gray-400 group-hover:text-teal-400"></i>
+        <span class="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-teal-400 to-cyan-500">ABOUT</span>
+      </a>
+      <a href="#projects" class="group relative flex items-center gap-2 cursor-pointer transition duration-300">
+        <i data-lucide="folder" class="w-5 h-5 text-gray-400 group-hover:text-purple-400"></i>
+        <span class="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-purple-400 to-pink-500">PROJECTS</span>
+      </a>
+      <a href="#skills" class="group relative flex items-center gap-2 cursor-pointer transition duration-300">
+        <i data-lucide="layers" class="w-5 h-5 text-gray-400 group-hover:text-yellow-400"></i>
+        <span class="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-yellow-400 to-orange-500">SKILLS</span>
+      </a>
+      <a href="#resume" class="group relative flex items-center gap-2 cursor-pointer transition duration-300">
+        <i data-lucide="file-text" class="w-5 h-5 text-gray-400 group-hover:text-green-400"></i>
+        <span class="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-green-400 to-emerald-500">RESUME</span>
+      </a>
+      <a href="#contact" class="group relative flex items-center gap-2 cursor-pointer transition duration-300">
+        <i data-lucide="mail" class="w-5 h-5 text-gray-400 group-hover:text-pink-400"></i>
+        <span class="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-pink-500 to-red-500">CONTACT</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="text-center py-24 hero-animation px-4" id="home">
+    <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_kyu7xb1v.json" background="transparent" speed="1" style="width: 200px; height: 200px; margin: 0 auto;" loop autoplay></lottie-player>
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4" id="hero-title">Hi, I'm Vipul Rale</h2>
+    <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-6">Aspiring Developer | Passionate about Tech & Design | Information Technology</p>
+    <button class="text-lg px-6 py-3 bg-blue-600 hover:bg-blue-700 transition rounded" onclick="window.location.href='https://github.com/VipulRale1028'">Explore My Work</button>
+  </section>
+<hr class="border-t border-gray-600 my-12 w-3/4 mx-auto opacity-30">
+
+  <!-- About Section (Zigzag) -->
+  <section class="px-4 sm:px-8 py-16 min-h-screen flex flex-col lg:flex-row items-center gap-10" id="about">
+    <div class="lg:w-1/2 text-center lg:text-left">
+      <h3 class="text-3xl font-bold mb-6">About Me</h3>
+      <p class="text-lg leading-relaxed text-gray-300 max-w-xl">
+        I am Vipul Rale, an enthusiastic IT student with a passion for software development, design, and solving real-world problems using technology. I specialize in tools like Excel, MySQL, Python, and Power BI.
+        I love blending creativity with logic to develop applications that are both functional and beautiful.
+      </p>
+    </div>
+    <div class="lg:w-1/2">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="rounded-xl w-80 mx-auto" alt="Vipul Profile">
+    </div>
+  </section>
+<hr class="border-t border-gray-600 my-12 w-3/4 mx-auto opacity-30">
+
+
+ <!-- Projects Section (Zigzag flipped) -->
+<section class="bg-gray-800 px-4 sm:px-8 py-16" id="projects">
+  <h3 class="text-3xl font-bold text-center mb-12 text-white">Projects</h3>
+
+  <!-- Project 1 -->
+  <div class="flex flex-col lg:flex-row items-center gap-10 mb-16">
+    <div class="lg:w-1/2 flex justify-center">
+      <img src="https://static.vecteezy.com/system/resources/previews/000/537/055/original/hand-holding-medical-icon-symbol-vector-healthcare-concept.jpg"
+           alt="Medical Admin Dashboard" class="rounded-xl shadow-lg max-w-md w-full" />
+    </div>
+    <div class="lg:w-1/2 text-center lg:text-left">
+      <a href="https://github.com/VipulRale1028/medical-management-system" 
+         target="_blank" 
+         class="text-xl font-semibold text-blue-400 hover:underline">
+        Medical Admin Dashboard
+      </a>
+      <p class="text-gray-300 mt-2">
+        A secure and intuitive platform for managing patient data and medical records. Built with clean UI and backend support.
+      </p>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="flex flex-col lg:flex-row-reverse items-center gap-10">
+    <div class="lg:w-1/2 flex justify-center">
+      <img src="https://media.assettype.com/outlookbusiness/2024-11-12/qayaup62/ecommerce.png?w=801&auto=format%2Ccompress&fit=max&format=webp&dpr=1.0" 
+           alt="Ecommerce Sales Analysis" class="rounded-xl shadow-lg max-w-md w-full" />
+    </div>
+    <div class="lg:w-1/2 text-center lg:text-left">
+      <a href="https://github.com/VipulRale1028/Ecommerce-Sales-Analysis-Excel-" 
+         target="_blank" 
+         class="text-xl font-semibold text-blue-400 hover:underline">
+        Ecommerce Sales Analysis
+      </a>
+      <p class="text-gray-300 mt-2">
+        Excel-based dashboard that visualizes key ecommerce sales metrics for better business decisions.
+      </p>
+    </div>
+  </div>
+  
+</section>
+<hr class="border-t border-gray-600 my-12 w-3/4 mx-auto opacity-30">
+
+
+
+  <!-- Skills Section (Zigzag) -->
+  <section class="px-4 sm:px-8 py-16" id="skills">
+    <div class="flex flex-col lg:flex-row items-center gap-10">
+      <div class="lg:w-1/2">
+        <h3 class="text-3xl font-bold mb-8 text-center lg:text-left">Skills</h3>
+        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-300 text-lg">
+          <li>Power BI</li>
+          <li>MySQL</li>
+          <li>Excel</li>
+          <li>Python</li>
+          <li>Google Colab</li>
+        </ul>
+      </div>
+      <div class="lg:w-1/2">
+        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721293.png" alt="Skills Image" class="rounded-xl w-80 mx-auto">
+      </div>
+    </div>
+  </section>
+<hr class="border-t border-gray-600 my-12 w-3/4 mx-auto opacity-30">
+
+  <!-- Resume Section (Zigzag flipped) -->
+  <section class="bg-gray-800 px-4 sm:px-8 py-16" id="resume">
+    <div class="flex flex-col lg:flex-row items-center gap-10">
+      <div class="lg:w-1/2 order-2 lg:order-1">
+        <img src="https://cdn-icons-png.flaticon.com/512/3095/3095583.png" alt="Resume" class="rounded-xl w-64 mx-auto">
+      </div>
+      <div class="lg:w-1/2 order-1 lg:order-2 text-center lg:text-left">
+        <h3 class="text-3xl font-bold mb-6">Resume</h3>
+        <p class="text-gray-300 mb-4">Download my resume to learn more about my background and projects.</p>
+        <a href="https://github.com/VipulRale1028/Resume/blob/main/Vipul%20R%20Rale.pdf" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Download Resume</a>
+      </div>
+    </div>
+  </section>
+<hr class="border-t border-gray-600 my-12 w-3/4 mx-auto" style="opacity: 0.25;">
+
+
+  <!-- Contact Section -->
+  <section class="px-4 sm:px-8 py-16" id="contact">
+    <h3 class="text-3xl font-bold mb-6 text-center">Contact Me</h3>
+    <p class="text-gray-300 mb-6 text-center">Feel free to reach out via email or connect with me on social media.</p>
+    <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center text-center">
+      <a href="mailto:vipulrale1008@gmail.com" class="flex items-center space-x-2"><i class="fas fa-envelope"></i><span>Email</span></a>
+      <a href="https://github.com/VipulRale1028" target="_blank" class="flex items-center space-x-2"><i class="fab fa-github"></i><span>GitHub</span></a>
+      <span class="flex items-center space-x-2"><i class="fas fa-phone"></i><span>+91 7887760996 | +91 8237082014</span></span>
+      <a href="https://www.naukri.com/mnjuser/profile?id=&altresid" target="_blank" class="flex items-center space-x-2"><i class="fas fa-briefcase"></i><span>Naukri</span></a>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-400">
+    © 2025 Vipul Rale. All rights reserved.
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('#hero-title', { duration: 1000, origin: 'top', distance: '50px' });
+    ScrollReveal().reveal('#about', { duration: 1000, origin: 'left', distance: '50px', delay: 200 });
+    ScrollReveal().reveal('#projects', { duration: 1000, origin: 'right', distance: '50px', delay: 400 });
+    ScrollReveal().reveal('#skills', { duration: 1000, origin: 'bottom', distance: '50px', delay: 600 });
+    ScrollReveal().reveal('#resume', { duration: 1000, origin: 'top', distance: '50px', delay: 800 });
+    ScrollReveal().reveal('#contact', { duration: 1000, origin: 'bottom', distance: '50px', delay: 1000 });
+    lucide.createIcons();
+  </script>
+</body>
+</html>
