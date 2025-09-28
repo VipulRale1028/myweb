@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vipul Rale — Data Analyst</title>
+  <meta name="description" content="Vipul Rale — Data Analyst portfolio. SQL | Python | Power BI | Excel" />
+
+  <style>
+    :root {
+      --bg:#f8f5f2;         /* off-white background */
+      --card:#ffffff;       /* pure white for cards */
+      --muted:#666666;      /* muted gray text */
+      --accent:#b11226;     /* cherry red */
+      --accent-hover:#8d0e1e;
+      --maxw:1100px;
+      --radius:16px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html, body { height:100%; margin:0; }
+    body {
+      background: var(--bg);
+      color:#1a1a1a;
+      line-height:1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height:56vh;
+      display:grid;
+      place-items:center;
+      position:relative;
+      background-image: url('assets/bg.jpg');
+      background-size:cover;
+      background-position:center;
+    }
+    .hero::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.6), var(--bg) 70%);
+    }
+
+    .container {
+      width:94%;
+      max-width:var(--maxw);
+      margin:0 auto;
+      position:relative;
+      z-index:2;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #e5e5e5;
+      padding:22px;
+      border-radius:var(--radius);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      opacity:0;
+      transform:translateY(20px);
+      transition:all 0.6s ease;
+    }
+    .card.visible {
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .hero-grid {
+      display:grid;
+      gap:20px;
+      grid-template-columns: 140px 1fr;
+      align-items:center;
+      margin-top:8vh;
+    }
+
+    /* Avatar */
+    .avatar {
+      width:130px;
+      height:130px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:36px;
+      color:#fff;
+      background:var(--accent);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      flex-shrink:0;
+      transition:transform 0.4s ease;
+    }
+    .avatar:hover {
+      transform:scale(1.05);
+    }
+
+    .hero-info h1 {
+      margin:0 0 6px 0;
+      font-size:28px;
+      letter-spacing:0.2px;
+    }
+    .hero-info p.title {
+      margin:0 0 12px 0;
+      color:var(--accent);
+      font-weight:600;
+    }
+
+    .meta-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .pill {
+      background:#f2f2f2;
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .cta-row { margin-top:12px; display:flex; gap:12px; align-items:center; }
+    .btn {
+      padding:10px 14px;
+      border-radius:10px;
+      border:0;
+      cursor:pointer;
+      font-weight:600;
+      background:var(--accent);
+      color:#fff;
+      transition:background 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background:var(--accent-hover);
+      transform:scale(1.05);
+    }
+    .btn-outline {
+      background:transparent;
+      border:2px solid var(--accent);
+      color:var(--accent);
+    }
+    .btn-outline:hover {
+      background:var(--accent);
+      color:#fff;
+    }
+
+    .section { margin:36px 0; }
+    .grid-2 { display:grid; grid-template-columns: 1fr 360px; gap:20px; }
+    @media (max-width:900px) {
+      .grid-2 { grid-template-columns:1fr; }
+      .hero-grid { grid-template-columns:110px 1fr; }
+    }
+
+    h2 { margin:0 0 14px 0; font-size:18px; color:var(--accent); }
+    .muted { color:var(--muted); font-size:14px; }
+
+    /* Lists */
+    .card-list, .proj-list { display:flex; flex-direction:column; gap:12px; }
+    .item, .project {
+      padding:12px;
+      border-radius:12px;
+      background:#fff;
+      border:1px solid #eaeaea;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .item:hover, .project:hover {
+      transform:translateY(-4px);
+      box-shadow:0 6px 20px rgba(0,0,0,0.12);
+    }
+    .item h3, .project h3 { margin:0; font-size:15px; color:#111; }
+    .item p, .project p { margin:6px 0 0; color:var(--muted); font-size:14px; }
+
+    .skills { display:flex; gap:8px; flex-wrap:wrap; }
+    .skill {
+      padding:8px 10px;
+      background:#f4f4f4;
+      border-radius:999px;
+      color:#111;
+      font-weight:600;
+      font-size:13px;
+      transition:background 0.3s ease, transform 0.3s ease;
+    }
+    .skill:hover {
+      background:var(--accent);
+      color:#fff;
+      transform:scale(1.05);
+    }
+
+    footer {
+      margin:40px 0 80px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .links a { color:var(--accent); text-decoration:none; font-weight:600; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="container">
+      <div class="card hero-grid">
+        <div class="avatar">VR</div>
+        <div class="hero-info">
+          <h1>Vipul Rale</h1>
+          <div class="meta-row">
+            <p class="title">Data Analyst — SQL · Python · Power BI · Excel</p>
+            <span class="pill">Mumbai</span>
+            <span class="pill">B.Sc. IT (CGPA 8.1)</span>
+          </div>
+          <p class="muted" style="margin-top:12px;max-width:70ch;">
+            I’m a Data Analyst experienced in cleaning large datasets, exploratory data analysis, and building Power BI dashboards to drive sales growth and strategic decisions — especially for export/trading scenarios.
+          </p>
+          <div class="cta-row">
+            <a href="#projects" 
+   style="
+     display:inline-block;
+     padding:10px 14px;
+     border-radius:10px;
+     border:2px solid #b11226;
+     color:#b11226;
+     font-weight:600;
+     text-decoration:none;
+     transition:all 0.3s ease;
+   "
+   onmouseover="this.style.background='#b11226'; this.style.color='#fff';"
+   onmouseout="this.style.background='transparent'; this.style.color='#b11226';">
+   <b>Projects</b>
+</a>
+
+          </div>
+          <div style="margin-top:10px;color:var(--muted);font-size:13px;">
+            <span class="muted">Email:</span>
+            <a class="links" href="mailto:vipulrale10@gmail.com">vipulrale10@gmail.com</a> &nbsp; · &nbsp;
+            <a class="links" href="https://github.com/VipulRale1028" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container" style="margin-top:18px;">
+    <section class="grid-2">
+      <!-- Left -->
+      <div>
+        <div class="section card">
+          <h2>Experience</h2>
+          <div class="card-list">
+            <div class="item">
+              <h3>Data Analyst - JK International Traders</h3>
+              <div class="meta-small">Working · On-Site</div>
+              <p>Processed & standardized a dataset of over 6,50,000 rows. Performed data cleaning and preparation, developed Power BI dashboards to visualize revenue trends and monthly performance. Supported sales growth strategies for exports to African markets.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="projects" class="section card">
+          <h2>Projects</h2>
+          <div class="proj-list">
+            <div class="project">
+              <h3>Ecommerce Sales Analysis Dashboard</h3>
+              <div class="meta-small">01/2025 — 02/2025 · Excel & Visualization</div>
+              <p class="muted">Built an Excel dashboard to surface customer behaviour and revenue trends with actionable insights to optimize sales and marketing.</p>
+              <div style="margin-top:8px;">
+                <a class="links" href="https://github.com/VipulRale1028/Ecommerce-Sales-Analysis-Excel-" target="_blank">GitHub — Ecommerce Sales Analysis</a>
+              </div>
+            </div>
+            <div class="project">
+              <h3>Atliq Hardware Sales Dashboard</h3>
+              <div class="meta-small">02/2025 — 03/2025 · Power BI / Dashboard</div>
+              <p class="muted">Real-time visibility to sales orders, reduced manual gathering time by 20% and found opportunities for 10% cost savings. Helped detect a 14% post-festival sales drop in South region.</p>
+              <div style="margin-top:8px;">
+                <a class="links" href="https://github.com/VipulRale1028/Atliq-Hardware-Sales/tree/main" target="_blank">GitHub — Atliq Hardware</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section card">
+          <h2>Skills</h2>
+          <div class="skills">
+            <span class="skill">MySQL</span>
+            <span class="skill">Python</span>
+            <span class="skill">Pandas / EDA</span>
+            <span class="skill">Power BI</span>
+            <span class="skill">Excel</span>
+            <span class="skill">Google Sheets</span>
+            <span class="skill">PyCharm</span>
+            <span class="skill">Google Colab</span>
+          </div>
+        </div>
+
+        <div class="section card">
+          <h2>Key Achievements</h2>
+          <p class="muted">Successfully generated actionable data-driven recommendations that supported company expansion and improved sales strategy in international markets.</p>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <aside>
+        <div class="card section">
+          <h2>Contact</h2>
+          <div class="contact-grid">
+            <div class="contact-row"><strong>Phone</strong> <span class="muted">+91 78877 60996</span></div>
+            <div class="contact-row"><strong>Email</strong> <a href="mailto:vipulrale10@gmail.com" class="muted">vipulrale10@gmail.com</a></div>
+            <div class="contact-row"><strong>Location</strong> <span class="muted">Mumbai, India</span></div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Education</h2>
+          <div class="item">
+            <h3>B.Sc. Information Technology — VBDBA College</h3>
+            <div class="meta-small">01/2022 — 06/2025 · CGPA 8.1</div>
+            <p class="muted">Ratnagiri</p>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Quick Links</h2>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <a class="links" href="https://github.com/VipulRale1028" target="_blank">GitHub</a>
+            <a class="links" href="https://github.com/VipulRale1028/Resume/blob/main/VipulRaleResume.pdf" download>Download Resume (PDF)</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      Designed & built by Vipul Rale · © <span id="year"></span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const cards = document.querySelectorAll('.card');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if (cardTop < triggerBottom) card.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>
